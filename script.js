@@ -52,13 +52,25 @@ btn.addEventListener("click", function () {
 //   shoppingListHeading.classList.remove("displayHide");
 // });
 
-// yasir contact button
+// Yasir start contact button
 
 const contactForm = document.querySelector("#contactformbutton");
 
 if (contactForm !== undefined && contactForm !== null) {
   contactForm.addEventListener("click", (event) => {
     event.preventDefault();
-    alert("Thank you for your message");
+    const popUp = document.querySelector("#popUp");
+    popUp.style.display = "flex";
+    const backgroundShade = document.querySelector(".backgroundShade");
+    backgroundShade.style.display = "block";
   });
-}
+};
+
+const contactClose = document.querySelector("#contactClose").addEventListener("click", (event) => {
+  event.preventDefault();
+  let popUp = document.querySelector("#popUp").style.display = "none";
+  const backgroundShade = document.querySelector(".backgroundShade").style.display = "none";
+});
+
+
+// Yasir slut contact button
