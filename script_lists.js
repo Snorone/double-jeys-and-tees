@@ -32,6 +32,19 @@ buildMessageListSelector(
   messageListSelectedCallback
 );
 
+// Anne-lie: Here is code for mute button
+const muteBtn = document.querySelector("#muteBtn");
+let isSoundMuted = false;
+
+muteBtn.addEventListener("click", ()=>{
+  isSoundMuted = !isSoundMuted;
+  muteBtn.innerHTML = isSoundMuted
+  ? '<i class="fa-solid fa-volume-xmark"></i>'
+  : '<i class="fa-solid fa-volume-high"></i>';
+  
+});
+// Anne-lie: mute button ends
+
 // stoffe: REPLACED form event handler, create a new message with target list
 const newMessageForm = document.querySelector("form");
 if (newMessageForm !== undefined && newMessageForm !== null) {
@@ -42,7 +55,13 @@ if (newMessageForm !== undefined && newMessageForm !== null) {
     const targetList = document.querySelector("#message-list-picker").value;
     const displayList = document.querySelector("#message-list-show");
     const submitSound = new Audio("./audio/shoppinglist-submit-sound.mp3");
-    submitSound.play();
+
+    // Anne-lie:mute button
+    if(!isSoundMuted){
+      submitSound.play();
+    }
+    // Anne-lie: mute button
+    
     displayList.value = targetList;
 
     //Angelica: Display todays weather in Malmö if user input is 'todays weather'
