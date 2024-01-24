@@ -10,6 +10,7 @@ import {
   getListNameExists,
   deleteList,
   getListIdExists,
+  getWeather
 } from "./modules/lists.js";
 
 // stoffe: Build and insert the list picker in the new message form.
@@ -44,11 +45,22 @@ if (newMessageForm !== undefined && newMessageForm !== null) {
     submitSound.play();
     displayList.value = targetList;
 
-    postMessageToList(targetList, userInput).then((postResponse) => {
-      getMessagesFromList(targetList).then((messageData) => {
-        displayMessagesInList(messageData, targetList);
+    //Angelica: Display todays weather in Malmö if user input is 'todays weather'
+    if(userInput === 'todays weather'){
+        const weather = getWeather();
+        weather.then(data => {
+          if(data && data.timeSeries && data.timeSeries.length){
+            const cel = data.timeSeries[0].parameters.find(p => p.name === 't');
+            alert(`It is ${cel.values[0]} degrees Celcius in Malmö`);
+          }
+        })
+    }else{
+      postMessageToList(targetList, userInput).then((postResponse) => {  
+        getMessagesFromList(targetList).then((messageData) => {
+          displayMessagesInList(messageData, targetList);
+        });
       });
-    });
+    }
 
     userInputElem.value = "";
     userInputElem.focus();

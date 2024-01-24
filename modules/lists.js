@@ -135,6 +135,12 @@ async function deleteList(listId) {
 
     return data;
 }
+async function getWeather(){
+    const url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/12/lat/55/data.json";
+    let response = await fetch(url, {});
+    let data = await response.json();
+    return data;
+}
 
 export {
     createList,
@@ -146,4 +152,5 @@ export {
     deleteMessageFromList,
     getListNameExists,
     getListIdExists,
+    getWeather
 }
