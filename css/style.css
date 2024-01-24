@@ -162,7 +162,7 @@ button:hover {
   }
   .nav-menu.active {
     left: 0;
-  }
+  }  
 }
 /* Hamburger menu And Navbar "End" */
 
@@ -325,12 +325,16 @@ body.dark-theme {
 }
 #contactmessage{
  margin-top: 20px;
+
 }
 #contactformbutton{
   background-color:#02427d;
   border-color: #045eb2;
   border-radius: 4px;
   color: #fff;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
 }
 /* * {
   font-family: Arial, Helvetica, sans-serif;
@@ -346,6 +350,9 @@ footer {
   height: 50px;
   padding: 1.5em;
   margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 #footername {
@@ -393,13 +400,27 @@ footer a:hover {
   padding: 5px;
 }
 
+
 /* LUNA ANIMATION CSS */
 #arrowLottie {
-  width: 300px;
-  height: 300px;
+  width: 130px;
+  height: 200px;
   position: absolute;
-  left: 50%;
+  left:50%;
   bottom: 90px;
-  margin-left: -330px;
+  margin-left: -180px;
   transform: rotate(40deg);
-}
+  }
+
+  @media(min-width: 450px){
+    /* LUNA ANIMATION CSS */
+  #arrowLottie {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left:50%;
+    bottom: 90px;
+    margin-left: -330px;
+    transform: rotate(40deg);
+  }
+  }
