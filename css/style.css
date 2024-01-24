@@ -7,8 +7,12 @@
 }
 body {
   background: var(--bkg-color);
+  height: 100vh;
+  position: relative;
 }
-
+.sectionstyle {
+  min-height: 100vh;
+}
 #background {
   background: url(../img/background-img.png);
   height: 95vh;
@@ -254,8 +258,7 @@ btnDiv button {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  transition: 0.3s;
+  justify-content: start;
   padding: 10px;
 }
 
@@ -264,6 +267,7 @@ btnDiv button {
   background-color: var(--form-color);
   color: var(--formtext-color);
   width: 80vw;
+  margin-bottom: 10vh;
 }
 #aboutdiv h3 {
   text-align: center;
@@ -277,7 +281,7 @@ btnDiv button {
   padding: 10px;
   color: var(--formtext-color);
 }
-/* testar darkmode */
+/* darkmode */
 
 body {
   --text-color: #ffffff;
@@ -360,8 +364,8 @@ footer {
   justify-content: space-between;
   height: 50px;
   padding: 1.5em;
-  margin-top: 50px;
-  position: absolute;
+  /* margin-top: 50px; */
+  position: relative;
   bottom: 0;
   width: 100%;
 }
