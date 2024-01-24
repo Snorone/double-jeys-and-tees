@@ -302,12 +302,22 @@ body.dark-theme {
 @media (prefers-color-scheme: dark) {
   /* defaults to dark theme */
   body {
-    --text-color: #eee;
-    --bkg-color: #121212;
+    --text-color: #ffffff;
+    --formtext-color: #ffffff;
+    --bkg-color: #292775;
+    --nav-color: #011a31;
+    --form-color: #141328;
   }
   body.light-theme {
-    --text-color: #222;
-    --bkg-color: #fff;
+    --text-color: #ffffff;
+    --formtext-color: #000000;
+    --bkg-color: linear-gradient(
+      69deg,
+      rgba(192, 190, 253, 1) 0%,
+      rgba(163, 158, 239, 1) 100%
+    );
+    --nav-color: #045eb2;
+    --form-color: #ffffff;
   }
 }
 
@@ -426,48 +436,46 @@ footer a:hover {
   #aboutdiv {
     width: 50vw;
   }
-  }
+}
 
+/* Yasir start popup */
 
-  /* Yasir start popup */
+#popUp {
+  width: 400px;
+  height: 300px;
+  border: solid 2px #011a31;
+  z-index: 10;
+  position: fixed;
+  background-color: #eee;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 
-  #popUp{
-    width: 400px;
-    height: 300px;
-    border: solid 2px #011a31;
-    z-index: 10;
-    position: fixed;
-    background-color: #eee;
-    border-radius: 10px;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    
-  }
+#popUp h3 {
+  text-align: center;
+  margin-top: 30%;
+}
 
-  #popUp h3{
-    text-align: center;
-    margin-top: 30%;
-  }
+#contactClose {
+  font-size: large;
+  background-color: #02427d;
+  border-color: #045eb2;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px;
+}
 
-  #contactClose{
-   font-size: large;
-   background-color:#02427d;
-    border-color: #045eb2;
-    border-radius: 4px;
-    color: #fff;
-    padding: 10px;
-  }
+.backgroundShade {
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
 
-  .backgroundShade{
-     z-index: 5;
-     width: 100vw;
-     height: 100vh;
-     position: fixed; 
-     background-color: rgb(0,0,0);
-     background-color: rgba(0,0,0,0.4);
-    display: none;
-  }
-
-  /* Yasir slut popup */
+/* Yasir slut popup */
