@@ -106,22 +106,6 @@ button:hover {
   box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#headingtitle {
-  text-align: center;
-  margin-top: 30px;
-}
-#headingtitle p {
-  border: 1px solid 045eb2;
-  display: inline-block;
-  padding: 8px;
-  margin-bottom: 10px;
-  background-color: #045eb2;
-  color: white;
-  border-radius: 4px;
-  border-color: #045eb2;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
 @media (max-width: 450px) {
   #background {
     background: url(../img/HOMEimg.png);
@@ -205,11 +189,12 @@ btnDiv button {
 #headingtitle p {
   border: 1px solid 045eb2;
   display: inline-block;
+  padding: 8px;
   padding-left: 15vw;
   padding-right: 15vw;
   margin-bottom: 10px;
   background-color: var(--nav-color);
-  color: white;
+  color: var(--formtext-color);
   border-radius: 10px;
   /* border-color: #045eb2; */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
@@ -270,7 +255,6 @@ btnDiv button {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   padding: 10px;
 }
@@ -279,7 +263,7 @@ btnDiv button {
   border-radius: 10px;
   background-color: var(--form-color);
   color: var(--formtext-color);
-  width: 50vw;
+  width: 80vw;
 }
 #aboutdiv h3 {
   text-align: center;
@@ -374,7 +358,7 @@ footer {
 
 #footername {
   font-size: 0.7em;
-  color: #fff;
+  color: var(--text-color);
 }
 
 footer > nav ul {
@@ -438,5 +422,8 @@ footer a:hover {
     bottom: 90px;
     margin-left: -330px;
     transform: rotate(40deg);
+  }
+  #aboutdiv {
+    width: 50vw;
   }
 }
