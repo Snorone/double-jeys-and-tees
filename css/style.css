@@ -317,6 +317,21 @@ body.dark-theme {
   border-radius: 10px;
 }
 
+#contact{
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+#contactmessage{
+ margin-top: 20px;
+}
+#contactformbutton{
+  background-color:#02427d;
+  border-color: #045eb2;
+  border-radius: 4px;
+  color: #fff;
+}
 /* * {
   font-family: Arial, Helvetica, sans-serif;
 } */
