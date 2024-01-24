@@ -80,6 +80,14 @@ a {
   background-color: white;
 }
 
+
+/* Hover styling to your buttons */
+button:hover {
+  background-color: linear-gradient(180deg, #045EB2 0%, #EFCEF4 100%);
+  cursor: pointer;
+  color: white;
+}
+
 /*Knapp som lligger på "HOME*/
 #createListBtn {
   background-color: #045eb2;
@@ -219,8 +227,8 @@ btnDiv button {
 }
 #unOrdermessage button {
   background: url(../img/closeBtn2.svg);
-   width: 20px;
-  height: 20px; 
+  width: 20px;
+  height: 20px;
   background-size: contain;
   background-color: var(--form-color);
   border-radius: 50%;
@@ -328,30 +336,70 @@ body.dark-theme {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-/* .footer{
-  
-} */
+/* Footer */
+footer {
+  background-color: var(--nav-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 1.5em;
+  margin-top: 50px;
+}
+
+#footername {
+  font-size: 0.7em;
+  color: #fff;
+}
+
+footer > nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: orange;
+}
 
 /* Style för feature från Stoffe */
-#shoppingListHeading{
+#shoppingListHeading {
   text-align: center;
   margin: 1rem;
 }
-#shoppingListHeading select{
+#shoppingListHeading select {
   padding: 5px;
 }
 
-#listsForm{
+#listsForm {
   text-align: center;
 }
-#deleteListsForm{
+#deleteListsForm {
   text-align: center;
   margin: 1rem;
 }
-#message-list-picker{
+#message-list-picker {
   padding: 5px;
 }
 
-#lists-delete-id{
+#lists-delete-id {
   padding: 5px;
+}
+
+/* LUNA ANIMATION CSS */
+#arrowLottie {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  bottom: 90px;
+  margin-left: -330px;
+  transform: rotate(40deg);
 }
