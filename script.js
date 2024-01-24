@@ -44,8 +44,6 @@ btn.addEventListener("click", function () {
 
 //end darkmode
 
-
-
 // const createListBtn = document.querySelector("#btnDiv");
 // createListBtn.addEventListener("click", () => {
 //   formEL.classList.remove("displayHide");
@@ -56,7 +54,11 @@ btn.addEventListener("click", function () {
 
 // yasir contact button
 
-document.querySelector("#contactformbutton").addEventListener("click", (event) => {
-  event.preventDefault();
-  alert("Thank you for your message")
-})
+const contactForm = document.querySelector("#contactformbutton");
+
+if (contactForm !== undefined && contactForm !== null) {
+  contactForm.addEventListener("click", (event) => {
+    event.preventDefault();
+    alert("Thank you for your message");
+  });
+}
