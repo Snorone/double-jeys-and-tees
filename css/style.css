@@ -483,3 +483,12 @@ footer a:hover {
 }
 
 /* Yasir slut popup */
+
+/*Anne-lies mutebutton*/
+#muteBtn{
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+/*Anne-lies mute button stop*/
