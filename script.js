@@ -68,7 +68,7 @@ if (contactForm !== undefined && contactForm !== null) {
 
 const contactClose = document.querySelector("#contactClose");
 
-if (contactClose !== undefined && contactForm !== null) {
+if (contactClose !== undefined && contactClose !== null) {
   contactClose.addEventListener("click", (event) => {
     event.preventDefault();
     let popUp = (document.querySelector("#popUp").style.display = "none");
