@@ -116,7 +116,6 @@ button:hover {
     height: 90vh;
     background-size: cover;
   }
-
   .hamburger {
     display: block;
   }
@@ -260,6 +259,15 @@ btnDiv button {
   padding: 10px;
 }
 
+.aboutDivImg {
+  width: 76vw;
+  margin: 2vw;
+}
+
+#aboutImg {
+  width: 100%;
+}
+
 #aboutdiv {
   border-radius: 10px;
   background-color: var(--form-color);
@@ -337,7 +345,7 @@ body.dark-theme {
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
 }
-#contactinput{
+#contactinput {
   text-align: center;
 }
 #contactmessage {
@@ -443,6 +451,10 @@ footer a:hover {
   #aboutdiv {
     width: 50vw;
   }
+  .aboutDivImg {
+    width: 46vw;
+    margin: 2vw;
+  }
 
   #contactmessage {
     margin-top: 20px;
@@ -494,7 +506,7 @@ footer a:hover {
 /* Yasir slut popup */
 
 /*Anne-lies mutebutton*/
-#muteBtn{
+#muteBtn {
   font-size: 14px;
   background-color: transparent;
   border: none;
