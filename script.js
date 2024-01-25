@@ -64,13 +64,18 @@ if (contactForm !== undefined && contactForm !== null) {
     const backgroundShade = document.querySelector(".backgroundShade");
     backgroundShade.style.display = "block";
   });
-};
+}
 
-const contactClose = document.querySelector("#contactClose").addEventListener("click", (event) => {
-  event.preventDefault();
-  let popUp = document.querySelector("#popUp").style.display = "none";
-  const backgroundShade = document.querySelector(".backgroundShade").style.display = "none";
-});
+const contactClose = document.querySelector("#contactClose");
 
+if (contactClose !== undefined && contactForm !== null) {
+  contactClose.addEventListener("click", (event) => {
+    event.preventDefault();
+    let popUp = (document.querySelector("#popUp").style.display = "none");
+    const backgroundShade = (document.querySelector(
+      ".backgroundShade"
+    ).style.display = "none");
+  });
+}
 
 // Yasir slut contact button
