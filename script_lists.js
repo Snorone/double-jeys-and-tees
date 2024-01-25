@@ -151,6 +151,8 @@ function displayMessagesInList(messageData, targetList) {
   for (const messageId in messageData) {
     const messageOption = document.createElement("li");
     const deleteBtn = document.createElement("button");
+
+    deleteBtn.innerHTML = '&#10005;'
     messageOption.id = messageId;
     messageOption.innerText = messageData[messageId].text;
     deleteBtn.classList.add("deleteButton");
