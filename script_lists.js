@@ -116,6 +116,11 @@ if (removeListForm !== undefined && removeListForm !== null) {
   removeListForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    //Från André
+    const trashCan = new Audio("./audio/kick-the-can-2-184024.mp3");
+    trashCan.play();
+    //Slut på kod
+
     const listIdSelect = document.querySelector("#lists-delete-id");
     console.log("LISTPICKER", listIdSelect);
 
